@@ -18,7 +18,8 @@ body {
 }
 
 p {
-	font-family: Fira Code;
+	font-family: 'Fira Code';
+	font-size: 1.2rem;
 }
 
 section {
@@ -68,7 +69,7 @@ li:nth-child(3) {animation-delay: 1s}
 .tabs {
 	margin: 1em 0;
 	width: 70vw;
-	height: 50vh;
+	height: 60vh;
 
 	display: flex;
 }
@@ -90,6 +91,7 @@ li:nth-child(3) {animation-delay: 1s}
 	cursor: pointer;
 	color: #c0caf5;
 	font-size: 0.9em;
+	text-align: right;
 }
 
 .tab-bar button.active {
@@ -101,7 +103,7 @@ li:nth-child(3) {animation-delay: 1s}
 }
 
 .tab-content {
-	padding: 1em;
+	padding: 1rem;
 	display: none;
 	transition: opacity .25s;
 }
@@ -120,12 +122,70 @@ li:nth-child(3) {animation-delay: 1s}
 
 #background {
 	position: absolute;
-	top: -100px;
-	left: -100px;
+	top: -50px;
+	left: -50px;
 	opacity: 0.2;
 	z-index: -999;
 }
 
 #header {
 	overflow: hidden;
+}
+
+a {
+	font-family: 'Fira Code', monospace;
+	font-weight: bold;
+	/* text-decoration-thickness: 3px; */
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: 0.6em;
+	text-decoration-color: #7aa2f770;
+	text-underline-offset: -0.15em;
+	color: inherit;
+	transition: filter 0.2s, text-underline-offset 0.2s, text-decoration-thickness 0.2s;
+}
+
+
+a:visited {
+	color: inherit;
+	text-decoration-color: #bb9af770;
+}
+
+a:hover {
+	filter: brightness(1.1);
+	text-underline-offset: -0.25em;
+	text-decoration-color: #7aa2f790;
+	cursor: pointer;
+}
+
+a:visited:hover {
+	filter: brightness(1.1);
+	text-decoration-color: #bb9af790;
+	cursor: pointer;
+}
+
+.html-orange {
+	color: #e44d26;
+}
+
+.css-blue {
+	color: #214CE4;
+}
+
+.highlight {
+	font-weight: bold;
+	filter: brightness(1.2);
+}
+
+.highlight-2 {
+	font-weight: bold;
+	color: #9d7cd8;
+}
+
+html, body { /* body won't work ¯\_(ツ)_/¯ */
+  scroll-snap-type: y proximity;
+}
+section {
+	width: 100vw;
+	height: 100vh;
+	scroll-snap-align: start;
 }

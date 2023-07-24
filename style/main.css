@@ -11,15 +11,23 @@
 	font-weight: 200 800;
 }
 
-body {
+#header {
 	font-family: 'Sono', sans-serif;
+}
+
+body {
+	font-family: 'Fira Code', monospace;
 	background-color: #1a1b26;
 	color: #c0caf5;
+	overflow-x: hidden;
 }
 
 p {
-	font-family: 'Fira Code', monospace;
 	font-size: 1.2rem;
+}
+
+h2 {
+	font-size: 2rem;
 }
 
 section {
@@ -40,6 +48,46 @@ section.text>div {
 
 section.text>div p {
 	margin-bottom: 2em;
+}
+
+section.projects {
+	flex-direction: column;
+	width: 100vw;
+}
+
+.projects h2 {
+	width: 70vw;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+.project-scroll {
+	width: 100vw;
+	height: 20em;
+	background-color: #1a1b26;
+	box-shadow: 0 0 5px 0 #16161E inset;
+	display: flex;
+	overflow-x: scroll;
+}
+
+.project-card {
+	min-width: 15em;
+	height: calc(100% - 2em);
+	margin: 1em;
+	background-color: #16161E;
+}
+
+.project-card h3 {
+	margin-bottom: 0.5em;
+}
+
+.project-card img {
+	width: 15em;
+	aspect-ratio: 16 / 9;
+}
+
+.project-card div {
+	padding: 0.5em;
 }
 
 li {
